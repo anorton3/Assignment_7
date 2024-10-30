@@ -102,9 +102,9 @@ r.features.forEach(function(feature){
    ///loop through the results to add new features to your stateObj
   if(feature.attributes['STUSPS'] != "DC"){
       stateName = feature.attributes['NAME']
-      var income = feature.attributes['B01001_001E']
+      var pops = feature.attributes['B01001_001E']
     
-      stateObj[stateName]['pop'] = income
+      stateObj[stateName]['pop'] = pops
   }
 
 })
@@ -235,7 +235,7 @@ loadAdditionalData()
               map.layers.removeAll()
               const noTax = {
                   type: "simple-fill", // autocasts as new SimpleFillSymbol()
-                  color: "#0c7d3f",
+                  color: "#fdff75",
                   style: "solid",
                   outline: {
                     width: 0.2,
@@ -245,7 +245,7 @@ loadAdditionalData()
             
                 const under3 = {
                   type: "simple-fill", // autocasts as new SimpleFillSymbol()
-                  color: "#99bf47",
+                  color: "#f89fe3",
                   style: "solid",
                   outline: {
                     width: 0.2,
@@ -255,7 +255,7 @@ loadAdditionalData()
             
                 const threeToFive = {
                   type: "simple-fill", // autocasts as new SimpleFillSymbol()
-                  color: "#d6a206",
+                  color: "#ffbe75",
                   style: "solid",
                   outline: {
                     width: 0.2,
@@ -265,7 +265,7 @@ loadAdditionalData()
             
                 const over5 = {
                   type: "simple-fill", // autocasts as new SimpleFillSymbol()
-                  color: "#c42f02",
+                  color: "#ef75ff",
                   style: "solid",
                   outline: {
                     width: 0.2,
